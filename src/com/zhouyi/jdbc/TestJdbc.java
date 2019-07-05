@@ -7,7 +7,7 @@ public class TestJdbc {
         String url = "jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false" +
                 "&serverTimezone=UTC";
         String user = "root";
-        String password = "zxc47POI!";
+        String password = "zhouyi1992";
 
 
         try {

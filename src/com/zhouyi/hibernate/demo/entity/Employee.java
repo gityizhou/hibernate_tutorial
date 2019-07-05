@@ -3,8 +3,8 @@ package com.zhouyi.hibernate.demo.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "student")
-public class Student {
+@Table(name="employee")
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,16 +17,16 @@ public class Student {
     @Column(name="last_name")
     private String last_name;
 
-    @Column(name="email")
-    private String email;
+    @Column(name="company")
+    private String company;
 
-    public Student() {
+    public Employee() {
     }
 
-    public Student(String first_name, String last_name, String email) {
+    public Employee(String first_name, String last_name, String company) {
         this.first_name = first_name;
         this.last_name = last_name;
-        this.email = email;
+        this.company = company;
     }
 
     public int getId() {
@@ -53,21 +53,21 @@ public class Student {
         this.last_name = last_name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCompany() {
+        return company;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCompany(String company) {
+        this.company = company;
     }
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Employee{" +
                 "id=" + id +
                 ", first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
-                ", email='" + email + '\'' +
+                ", company='" + company + '\'' +
                 '}';
     }
 }
